@@ -1,14 +1,13 @@
-### Mastodon Toot Bookmarklet
+### Mastodon Follow Bookmarklet
 
-[https://rmlewisuk.github.io/mastodon-toot-bookmarklet](https://rmlewisuk.github.io/mastodon-toot-bookmarklet)
+[https://github.com/kvnco/mastodon-follow-bookmarklet](https://github.com/kvnco/mastodon-follow-bookmarklet)
 
-- Adds the title and URL to a toot
-- Includes selected text if any exists
-
-![](screenshot.png)
+Easily follow a Mastodon account from any instance using this bookmarklet
 
 ### License 
 
 [http://rmlewisuk.mit-license.org/](http://rmlewisuk.mit-license.org/)
 
 Favicon from Mastodon
+
+mastodon-follow-bookmarklet is forked from [https://rmlewisuk.github.io/mastodon-toot-bookmarklet](https://rmlewisuk.github.io/mastodon-toot-bookmarklet)
