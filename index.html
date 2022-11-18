@@ -94,6 +94,10 @@
 
 		<p class="link-wrap"><a id="link" href="">Follow on Mastodon!</a></p>
 
+		3. Or add the following as a bookmark URL:
+
+		<p><textarea id="input" onfocus="this.select();" readonly></textarea></p>
+
 		<footer>
 			<p>Made by Kvnco <a href="https://framapiaf.org/kvnco">@kvnco@framapiaf.org</a></p>
 			<p>Forked from <a href="https://rknightuk.github.io/mastodon-toot-bookmarklet/">mastodon-toot-bookmarklet</a></p>
@@ -106,6 +110,9 @@
 			var instance = document.getElementById('instance').value;
 			var href = `javascript:(function(){var%20loc=location.href;location.href=%22https%5C:%5C/%5C/framapiaf.org%5C/authorize_interaction?uri=%22+loc;return;})()`;
 		}
+
+		document.getElementById('link').href = href;
+		document.getElementById('input').innerHTML = href;
 	</script>
 
 </body>
