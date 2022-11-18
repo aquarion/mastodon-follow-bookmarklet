@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width">
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-		<title>Mastodon Toot Bookmarklet</title>
+		<title>Mastodon Follow Bookmarklet</title>
 
 		<style>
 			html, body {
@@ -80,8 +80,8 @@
 <body onload="generateLink()">
 	
 	<header>
-		<h1>Mastodon Toot Bookmarklet</h1>
-		<h2>Toot the page you're currently on</h2>
+		<h1>Mastodon Follow Bookmarklet</h1>
+		<h2>Easily follow a Mastodon account from any instance using this bookmarklet</h2>
 	</header>
 
 	<div class="content">
@@ -92,29 +92,19 @@
 
 		<p>2. Drag this link to your bookmarks bar (or click it to try it out with this page)</p>
 
-		<p class="link-wrap"><a id="link" href="">Toot!</a></p>
-
-		3. Or add the following as a bookmark URL:
-
-		<p><textarea id="input" onfocus="this.select();" readonly></textarea></p>
-
-		<p><small>NB: If you select text before clicking, it will add that to the toot as well!</small></p>
+		<p class="link-wrap"><a id="link" href="">Follow on Mastodon!</a></p>
 
 		<footer>
-			<p><a href="https://rmlewisuk.github.io/better-mastodon/">Better Mastodon; CSS tweaks</a></p>
-			<p>Made by <a href="https://robblewis.me">Robb Lewis</a></p>
-			<p>Mastodon: <a href="https://toot.rodeo/@rmlewisuk">@rmlewisuk@toot.rodeo</a></p>
-			<p><a href="https://github.com/rmlewisuk/mastodon-toot-bookmarklet">Source on GitHub</a></p>
+			<p>Made by Kvnco <a href="https://framapiaf.org/kvnco">@kvnco@framapiaf.org</a></p>
+			<p>Forked from <a href="https://rknightuk.github.io/mastodon-toot-bookmarklet/">mastodon-toot-bookmarklet</a></p>
+			<p><a href="https://github.com/kvnco/mastodon-follow-bookmarklet">Source on GitHub</a></p>
 		</footer>
 	</div>
 
 	<script>
 		generateLink = function() {
 			var instance = document.getElementById('instance').value;
-			var href = `javascript:void(window.open('https://${instance}/share?text='+encodeURIComponent(document.title)+' '+encodeURIComponent(window.location.href)+encodeURIComponent(window.getSelection().toString() ? '\n\n': '')+encodeURIComponent(window.getSelection().toString()), '_blank','width=600,height=600,toolbar=no'))`;
-
-			document.getElementById('link').href = href;
-			document.getElementById('input').innerHTML = href;
+			var href = `javascript:(function(){var%20loc=location.href;location.href=%22https%5C:%5C/%5C/framapiaf.org%5C/authorize_interaction?uri=%22+loc;return;})()`;
 		}
 	</script>
 
