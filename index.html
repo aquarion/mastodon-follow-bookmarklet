@@ -109,10 +109,10 @@
 		generateLink = function() {
 			var instance = document.getElementById('instance').value;
 			var href = `javascript:void(window.open('https://${instance}/authorize_interaction?uri='+encodeURIComponent(window.location.href), '_blank','width=600,height=600,toolbar=no'))`;
-		}
 
-		document.getElementById('link').href = href;
-		document.getElementById('input').innerHTML = href;
+			document.getElementById('link').href = href;
+			document.getElementById('input').innerHTML = href;
+		}
 	</script>
 
 </body>
